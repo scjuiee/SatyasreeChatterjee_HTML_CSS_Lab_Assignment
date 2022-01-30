@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Show Hide Dropdown Using CSS</title>
+    <style>
+        header {
+            font-weight: bolder;
+            color: black;
+            font-size: xx-large;
+            text-align: right;
+            padding: 20px;
+            background-color: #FF5733;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            background: whitesmoke;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+            line-height: 21px;
+            text-align: left;
+        }
+
+        ul li a {
+            display: block;
+            padding: 8px 25px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            color: blue;
+            background: black;
+        }
+
+        ul li ul.dropdown {
+            min-width: 100%;
+            /* Set width of the dropdown */
+            background: #f2f2f2;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+            /* Display the dropdown */
+        }
+
+        ul li ul.dropdown li {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Demo of Dropdown</header>
+    <ul>
+        <li>
+            <a href="#">Link 1</a>
+            <ul class="dropdown">
+                    <li><a href="#">DD_LINK_1</a></li>
+                    <li><a href="#">DD_LINK_2</a></li>
+                    <li><a href="#">DD_LINK_3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Link 2</a>
+            <ul class="dropdown">
+                    <li><a href="#">DD_LINK_1</a></li>
+                    <li><a href="#">DD_LINK_2</a></li>
+                    <li><a href="#">DD_LINK_3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Link 3</a>
+            <ul class="dropdown">
+                <li><a href="#">DD_LINK_1</a></li>
+                <li><a href="#">DD_LINK_2</a></li>
+                <li><a href="#">DD_LINK_3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
